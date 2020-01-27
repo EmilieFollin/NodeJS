@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Test - Addition</title>
+</head>
+<body>
+<form action="/add" method="POST">
+    <label>A = <input type="text" name="num1" /></label>
+    <label>B = <input type="text" name="num2" /></label>
+    <input type="submit" value="Valider"/>
+</form>
+
+<form action="/sous" method="POST">
+    <label>A = <input type="text" name="num1" /></label>
+    <label>B = <input type="text" name="num2" /></label>
+    <input type="submit" value="Valider"/>
+</form>
+
+<% if (typeof num1 !== "undefined") { %>
+    <p>Num A : <%= num1 %></p>
+    <p>Num B : <%= num2 %></p>
+    <p>Résultat : <%= result %></p>
+<% } %>
+</body>
+</html>

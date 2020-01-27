@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Affichage des Students</title>
+</head>
+<body>
+<form action="/showStudent" method="POST">
+
+    <% for(var i=0; i<studentList.length; i++) {%>
+        <p><%= studentList[i].lastName + ' ' + studentList[i].firstName +' '+ studentList[i].age%></p>
+    <% } %>
+
+
+</form>
+
+
+</body>
+</html>
