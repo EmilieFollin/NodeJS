@@ -83,7 +83,7 @@ app.get('/crud', function (req, res) {
         req.body.firstname,
         req.body.age
     );
-    res.render('crud.ejs');
+    res.render('show.ejs');
 });
 
 app.get('/ListStudent', function (req,res) {
