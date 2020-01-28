@@ -5,10 +5,11 @@
     <title>Affichage des Students</title>
 </head>
 <body>
-<form action="/showStudent" method="POST">
+<form action="/ListStudent" method="POST">
 
     <% for(var i=0; i<studentList.length; i++) {%>
         <p><%= studentList[i].lastName + ' ' + studentList[i].firstName +' '+ studentList[i].age%></p>
+        <a href="/delete/<%= studentList[i].id%>">Supprimer</a>
     <% } %>
 
 

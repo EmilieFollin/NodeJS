@@ -23,8 +23,17 @@ module.exports = {
                 throw Error(err);
             }
         });
-    }
-    findAll : function () {
-        
+    },
+    findAll: function(callback)
+    {
+        studentModel.find({}, function(err, docs) {
+            if (!err){
+                callback(docs);
+            }
+            else
+            {
+                throw err;
+            }
+        });
     }
 }

@@ -86,11 +86,16 @@ app.get('/crud', function (req, res) {
     res.render('crud.ejs');
 });
 
-app.get('/showStudent', function (req,res) {
+app.get('/ListStudent', function (req,res) {
         studentService.findAll(function (students) {
             res.render('show.ejs',{studentList:students})
         })
-})
+});
+
+app.get('/delete/:id',function (req,res) {
+        studentService.remove(req.params.id)
+        res.redirect('/ListStudent')
+});
 
 
 app.listen(3000, function(){
